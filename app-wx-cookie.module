@@ -1,0 +1,10 @@
+#!url=https://raw.githubusercontent.com/braless/module/main/app-wx-cookie.module
+#!name=微信小程序
+#!desc=推送抓取的小程序CK到服务器
+#脚本功能:推送抓取的小程序CK到服务器
+#更新时间:2024-06-26
+#使用声明：️仅供学习交流，🈲️商业用途
+[Script]
+微信小程序 = type=http-request,pattern=^(https?:\/\/)?my\.m\.jd\.com\/account\/index\.html(\?.*)?$,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/JD-WX-COOKIE.js
+[MITM]
+hostname= *.jd.com

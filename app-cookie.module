@@ -1,0 +1,11 @@
+#!url=https://raw.githubusercontent.com/braless/module/main/app-cookie.module
+#!name=获取APP-COOKIE
+#!desc=获取APP-COOKIE
+#脚本功能:获取APP-COOKIE
+#更新时间:2024-06-26
+#使用声明：️仅供学习交流，🈲️商业用途
+
+[Script]
+推送COOKIE = type=http-response,pattern=^https?:\/\/anti-sdk-report\.m\.jd\.com\/report_event,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/JD-APP-COOKIE.js.js
+[MITM]
+hostname= *.jd.com
