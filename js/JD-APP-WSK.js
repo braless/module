@@ -51,6 +51,7 @@ function GetCookie() {
             //$.notify('成功!', '', realWsk);
             let data={"key":realWsk,"source":"jd_app","type":"wsk"}
             const opt = {url: "http://api.bilin.eu.org/push", body: JSON.stringify(data)}
+            $.notify("同步完成~","京东",data)
             $.http.post(opt).then((response) => JSON.parse(response.body))
         }else {
             $.notify('获取失败', '', '请检查匹配URL或配置内脚本类型 ‼️');

