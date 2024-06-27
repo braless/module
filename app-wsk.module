@@ -2,7 +2,7 @@
 #!name=推送WSK
 #!desc=推送抓取的WSK到服务器
 #脚本功能:推送抓取的WSK到服务器
-#更新时间:2024-06-26
+#更新时间:2024-06-27
 #使用声明：️仅供学习交流，🈲️商业用途
 [Script]
 推送WSK = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=newUserInfo,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/JD-APP-WSK.js
