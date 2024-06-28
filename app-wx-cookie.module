@@ -7,4 +7,4 @@
 [Script]
 微信小程序 = type=http-request,pattern=^(https?:\/\/)?my\.m\.jd\.com\/account\/index\.html(\?.*)?$,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/JD-WX-COOKIE.js
 [MITM]
-hostname= *.jd.com
+hostname = %APPEND% *.jd.com

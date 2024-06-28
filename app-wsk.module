@@ -7,4 +7,4 @@
 [Script]
 推送WSK = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=newUserInfo,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/JD-APP-WSK.js
 [MITM]
-hostname= *.jd.com
+hostname = %APPEND% *.jd.com

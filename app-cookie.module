@@ -8,4 +8,4 @@
 [Script]
 推送COOKIE = type=http-response,pattern=^https?:\/\/anti-sdk-report\.m\.jd\.com\/report_event,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/JD-APP-COOKIE.js
 [MITM]
-hostname= *.jd.com
+hostname = %APPEND% *.jd.com
