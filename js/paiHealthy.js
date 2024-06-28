@@ -1,4 +1,3 @@
-
 const APIKey = 'CookiesJD';
 const $ = new API(APIKey, true);
 const CacheKey = `#${APIKey}`;
@@ -11,7 +10,8 @@ function GetCookie() {
     const body = JSON.parse(text)
     try {
         if ($request.url.indexOf('https://lsprod3.laisitech.com/balance/history/trend/all/v2') > -1) {
-            let data={"value":body,"source":"wight_app","type":"healthy"}
+            let data={"source":"wight_app","type":"healthy","value":body}
+            $.notify('体重数据获取成功~', '', '');
             const opt = {url: "http://api.bilin.eu.org/healthy", body: JSON.stringify(data)}
             $.http.post(opt).then((response) => JSON.parse(response.body))
         }else {
