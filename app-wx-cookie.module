@@ -5,6 +5,6 @@
 #更新时间:2024-06-26
 #使用声明：️仅供学习交流，🈲️商业用途
 [Script]
-微信小程序 = type=http-request,pattern=^(https?:\/\/)?my\.m\.jd\.com\/account\/index\.html(\?.*)?$,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/JD-WX-COOKIE.js
+微信小程序 = type=http-request,pattern=^(https?:\/\/)?my\.m\.jd\.com\/account\/index\.html(\?.*)?$,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/jd_wx_ck.js
 [MITM]
 hostname = %APPEND% *.jd.com
