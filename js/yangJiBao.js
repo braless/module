@@ -19,9 +19,9 @@ const CacheKey = `#${APIKey}`;
 const mute = '#cks_get_mute';
 $.mute = $.read(mute);
 if ($request) GetCookie();
-
 function GetCookie() {
     const text = $response.body;
+    $.notify("养基宝拦截成功...","",text)
     var body = JSON.parse(text)
     try {
         if ($request.url.indexOf('https://app-api.yangjibao.com/account') > -1) {
