@@ -17,9 +17,9 @@
 //var body = {"validated":true,"key":"KV66M9P3WJ","create_time":"2099-02-02 00:00:00"}
 var objc = JSON.parse($response.body);
 $.notify("养基宝拦截成功...")
-objc.data.is_pay = true;
-objc.data.open_free_vip_sign=true;
-objc.data.subscribe_status=0;
-objc.data.vip_expiry_date="2099-02-02"
-objc.data.vip_label=true;
-$done({body : JSON.stringify(objc)});
+// objc.data.is_pay = true;
+// objc.data.open_free_vip_sign=true;
+// objc.data.subscribe_status=0;
+// objc.data.vip_expiry_date="2099-02-02"
+// objc.data.vip_label=true;
+// $done({body : JSON.stringify(objc)});
