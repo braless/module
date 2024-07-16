@@ -42,7 +42,7 @@ var body = {
         "token": "9aaf7fde-976b-4d7c-b3ea-f1f12374583a",
         "roles": [],
         "phone": "",
-        "subscribe_status": 1,
+        "subscribe_status": 0,
         "vip_expiry_date": "2999-03-20",
         "avatar": "http:\/\/imgcdn.yangjibao.com\/avatar\/316a5\/x8vSAyTPtjmgps9kx8HmzcyUOM.jpeg",
         "vip_label": true,
