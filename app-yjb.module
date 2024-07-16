@@ -5,6 +5,6 @@
 #更新时间:2024-07-16
 #使用声明：️仅供学习交流，🈲️商业用途
 [Script]
-YangJiBao = type=http-response,pattern=^http[s]?:\/\/app-api\.yangjibao\.com\/account,requires-body=0,script-path=https://github.com/braless/module/raw/main/js/yangJiBao.js
+YangJiBao = type=http-response,pattern=^http[s]?:\/\/app-api\.yangjibao\.com\/account,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/yangJiBao.js
 [MITM]
 hostname = %APPEND% *.yangjibao.com
