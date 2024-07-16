@@ -35,5 +35,5 @@ objc.data.subscribe_status = 0;
 objc.data.vip_expiry_date = "2099-12-31"
 objc.data.vip_label = true;
 objc.data.created_at = "2020-01-01 01:01:01"
-objc.data.avatar = "https://yangjibao.com/favicon.ico";
+//objc.data.avatar = "https://yangjibao.com/favicon.ico";
 $done({body: JSON.stringify(objc)});
