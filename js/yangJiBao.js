@@ -31,7 +31,7 @@ var body = {
     "timestamp": 1721138195,
     "data": {
         "has_fund_hold": true,
-        "nickname": "神经蛙",
+        "nickname": "超级VIP",
         "has_fund_option": true,
         "open_free_vip_sign": true,
         "is_pay": true,
