@@ -21,16 +21,17 @@ $.mute = $.read(mute);
 if ($request) GetCookie();
 
 function GetCookie() {
+    const text = $response.body;
+    var body = JSON.parse(text)
     try {
         if ($request.url.indexOf('https://app-api.yangjibao.com/account') > -1) {
-            var objc = JSON.parse($response.body);
-            $.notify("养基宝拦截成功...")
+            $.notify("养基宝拦截成功...","",text)
             // objc.data.is_pay = true;
             // objc.data.open_free_vip_sign=true;
             // objc.data.subscribe_status=0;
             // objc.data.vip_expiry_date="2099-02-02"
             // objc.data.vip_label=true;
-            $.done({body : JSON.stringify(objc)});
+            //$.done({body : JSON.stringify(body)});
         } else {
             $.notify('获取失败', '', '‼️');
         }
