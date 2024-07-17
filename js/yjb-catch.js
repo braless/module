@@ -11,7 +11,6 @@ function run() {
     const text = $response.body;
     const body = JSON.parse(text);
     const yjbData= body.data
-    $.notify("养基宝", "请求地址:"+url, "")
     try {
         if (url.indexOf('fund_buy_ranking') > -1 ) {
                 let data = { "type": "fund_buy_ranking", "value": yjbData}
