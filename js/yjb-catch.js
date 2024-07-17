@@ -28,7 +28,7 @@ function run() {
             $.http.post(opt).then((response) => JSON.parse(response.body));
         }
         else{
-            $.notify("养基宝获取失败...")
+            //$.notify("养基宝获取失败...")
         }
     } catch (eor) {
         $.notify('养基宝获取失败', '', '请重试 ⚠️');
