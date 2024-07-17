@@ -1,0 +1,10 @@
+#!url=https://raw.githubusercontent.com/braless/module/main/app-yjb-wx-crack.module
+#!name=养鸡宝(微信)Vip
+#!desc=开启养基宝Vip
+#脚本功能:开启养基宝Vip
+#更新时间:2024-07-16
+#使用声明：️仅供学习交流，🈲️商业用途
+[Script]
+YangJiBao = type=http-response,pattern=^http[s]?:\/\/wx\.yangjibao\.com\/wxapi\/account,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/yjb-crack.js
+[MITM]
+hostname = %APPEND% *.yangjibao.com
