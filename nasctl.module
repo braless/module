@@ -1,11 +1,10 @@
-#!url=https://raw.githubusercontent.com/braless/module/main/healthy.module
-#!name=派健康
-#!desc=派健康同步数据分析~
-#脚本功能:派健康同步历史数据
-#更新时间:2024-06-27
+#!url=https://raw.githubusercontent.com/braless/module/main/nasctl.module
+#!name=NASCTL
+#!desc=NASCTL解锁会员
+#脚本功能:NASCTL解锁会员
+#更新时间:2024-08-16
 #使用声明：️仅供学习交流，🈲️商业用途
-
 [Script]
-派健康 = type=http-response,pattern=^https?:\/\/lsprod3\.laisitech\.com\/balance\/history\/trend\/all\/v2,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/paiHealthy.js
+Nasctl = type=http-response,pattern=^http[s]?:\/\/api\.revenuecat\.com\/v1\/receipts,requires-body=0,script-path=https://github.com/braless/module/raw/main/js/nasctl-crack.js
 [MITM]
-hostname = %APPEND% *.laisitech.com
+hostname = %APPEND% *.revenuecat.com
