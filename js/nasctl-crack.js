@@ -39,5 +39,13 @@ var obj = {
         }
     }
 }
-
-$done({body: JSON.stringify(obj)});
+var headers={
+    "x-revenuecat-etag":"76b55ffe296f2f81",
+    ":status":"304",
+    "x-signature":"JfdFtzdsRBb3bg9XZ/wla0YIVyo7pzetLZdIHvakKL8iTgAAK3vrCHvD+hO5yfc4t/6/+UfCwM9Vv2OnTrT3K7Y4DTwtbwcZA3QQkhZH0ZLGRunTRlJxl9UZ/yKX0ByUYrevCQHkX9bM4GVYFw5J1aM2slxtg8hzZY2apQXV1MuEWsUdr4bSbgulElxst2XwKXhjZctiNvfTegu0ICeq5T1HexZyYCpgUbQ3GsniLtHQDeYB\n" +
+        "x-amzn-trace-id: Root=1-66beb13f-51436b3550faa93f46c59faa",
+    "x-revenuecat-request-time":"1723773247969",
+    "server":"envoy",
+    "x-request-id":"fc46e927-3ca2-4cd0-95d0-e6c9cded49c7"
+}
+$done({body: JSON.stringify(obj),headers:headers});
