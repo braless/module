@@ -1,5 +1,5 @@
-var req = $request.body;
-var app_user_id = req.app_user_id;
+//var req = $request.body;
+var app_user_id = "$RCAnonymousID:074797887abf4e0bab67da1fcc28e3d4";//req.app_user_id;
 var obj = {
     "request_date": "2024-08-16T01:00:29Z",
     "request_date_ms": 1723770029815,
