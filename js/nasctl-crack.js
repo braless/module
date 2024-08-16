@@ -1,4 +1,5 @@
-
+var req = JSON.parse($request.body);
+var app_user_id = req.app_user_id;
 var obj = {
     "request_date": "2024-08-16T01:00:29Z",
     "request_date_ms": 1723770029815,
@@ -15,7 +16,7 @@ var obj = {
         "last_seen": "2024-08-16T00:53:52Z",
         "management_url": "https://apps.apple.com/account/subscriptions",
         "non_subscriptions": {},
-        "original_app_user_id": "$RCAnonymousID:4b592f9089b84596b1b7ae27f43a3ffe",
+        "original_app_user_id": app_user_id,
         "original_application_version": "12",
         "original_purchase_date": "2023-07-11T06:12:46Z",
         "other_purchases": {},
