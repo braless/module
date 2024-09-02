@@ -2,6 +2,7 @@ const APIKey = 'CookiesJD';
 const $ = new API(APIKey, true);
 const CacheKey = `#${APIKey}`;
 const mute = '#cks_get_mute';
+
 $.mute = $.read(mute);
 if ($request) GetCookie();
 $.done();

@@ -3,6 +3,7 @@ const APIKey = 'CookiesJD';
 const $ = new API(APIKey, true);
 const CacheKey = `#${APIKey}`;
 const mute = '#cks_get_mute';
+const host = "https://api.oaife.com"
 $.mute = $.read(mute);
 if ($request) run();
 $.done();
@@ -14,17 +15,17 @@ function run() {
     try {
         if (url.indexOf('fund_buy_ranking') > -1 ) {
                 let data = { "type": "fund_buy_ranking", "value": yjbData}
-                const opt = {url: "http://api.bilin.eu.org/yjb", body: JSON.stringify(data)};
+                const opt = {url: `${host}/yjb`, body: JSON.stringify(data)};
                 $.http.post(opt).then((response) => JSON.parse(response.body));
 
         }else if(url.indexOf("fund_sell_ranking") > -1){
             let data = { "type": "fund_sell_ranking", "value": yjbData}
-            const opt = {url: "http://api.bilin.eu.org/yjb", body: JSON.stringify(data)};
+            const opt = {url: `${host}/yjb`, body: JSON.stringify(data)};
             $.http.post(opt).then((response) => JSON.parse(response.body));
         }
         else if(url.indexOf("fund_hold_ranking") > -1){
             let data = { "type": "fund_hold_ranking", "value": yjbData}
-            const opt = {url: "http://api.bilin.eu.org/yjb", body: JSON.stringify(data)};
+            const opt = {url: `${host}/yjb`, body: JSON.stringify(data)};
             $.http.post(opt).then((response) => JSON.parse(response.body));
         }
         else{
