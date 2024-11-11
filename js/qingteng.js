@@ -9,14 +9,12 @@ if ($request) run();
 $.done();
 function run() {
     const url = $request.url;
-    const text = $response.body;
-    const body = JSON.parse(text);
-    const yjbData= body.data
     try {
         if (url.indexOf('wx-love-img.afunapp.com') > -1 ) {
-                let data = { "type": "qingteng", "images": url}
-                const opt = {url: `${host}/qingteng`, body: JSON.stringify(data)};
-                $.http.post(opt).then((response) => JSON.parse(response.body));
+            $.notify('青藤之恋获取成功~', '', '请用快捷指令保存');
+            let data = { "type": "qingteng", "images": url}
+            const opt = {url: `${host}/qingteng`, body: JSON.stringify(data)};
+            $.http.post(opt).then((response) => JSON.parse(response.body));
         }
     } catch (eor) {
         $.notify('青藤之恋获取失败', '', '请重试 ⚠️');
