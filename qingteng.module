@@ -4,7 +4,8 @@
 #脚本功能:保存青藤之恋主页相册
 #更新时间:2024-11-11
 #使用声明：️仅供学习交流，🈲️商业用途
+#wx-love-img.afunapp.com
 [Script]
-推送WSK = type=http-response,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=newUserInfo,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/jd_app_wsk.js
+推送WSK = type=http-response,pattern=^https?:\/\/wx-love-img\.m\.afunapp\.com,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/qingteng.js
 [MITM]
-hostname = %APPEND% *.jd.com
+hostname = %APPEND% *.afunapp.com
