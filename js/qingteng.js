@@ -1,5 +1,5 @@
 
-const APIKey = 'CookiesJD';
+const APIKey = 'Qingteng';
 const $ = new API(APIKey, true);
 const CacheKey = `#${APIKey}`;
 const mute = '#cks_get_mute';
@@ -11,7 +11,7 @@ function run() {
     const url = $request.url;
     try {
         if (url.indexOf('wx-love-img.afunapp.com') > -1 ) {
-            $.notify('青藤之恋获取成功~', '', '请用快捷指令保存');
+            //$.notify('青藤之恋获取成功~', '', '请用快捷指令保存');
             let data = { "type": "qingteng", "images": url}
             const opt = {url: `${host}/qingteng`, body: JSON.stringify(data)};
             $.http.post(opt).then((response) => JSON.parse(response.body));
