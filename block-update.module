@@ -1,0 +1,15 @@
+#!name=屏蔽更新
+#!desc=屏蔽更新弹窗
+#脚本功能:屏蔽更新弹窗
+#更新时间:2025-07-15
+#源文件地址: https://raw.githubusercontent.com/wf021325/qx/master/task/csvw.js
+#使用声明：️仅供学习交流，🈲️商业用途
+[URL Rewrite]
+# 这是屏蔽旧版APP弹出更新的，开启重写可以使用旧版
+^https?:\/\/api\.mos\.csvw\.com\/mos\/app-update\/api\/v1\/app\/update$ - reject-dict
+# 首页弹窗
+^https:\/\/api\.mos\.csvw\.com\/mos\/operation\/home\/api\/v2\/app\/brand\/queryDataForOperation$/ - reject-dict
+[MITM]
+hostname = %APPEND% api.mos.csvw.com
+
+
