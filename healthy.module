@@ -8,6 +8,6 @@
 # 这是屏蔽旧版APP弹出更新的，开启重写可以使用旧版
 ^https?:\/\/utoken\.umeng\.com\/api\/updateZdata\/v2 - reject-dict
 [Script]
-派健康 = type=http-response,pattern=^https?:\/\/lsprod3\.laisitech\.com\/balance\/history\/trend\/all\/v2,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/paiHealthy.js
+派健康 = type=http-response,pattern=^https?:\/\/lsprod3\.laisitech\.com\/balance\/history\/trend\/all\/v2,requires-body=1,script-path=https://github.com/braless/module/raw/master/js/paiHealthy.js
 [MITM]
 hostname = %APPEND% *.laisitech.com

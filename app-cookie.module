@@ -5,6 +5,6 @@
 #使用声明：️仅供学习交流，🈲️商业用途
 
 [Script]
-推送COOKIE = type=http-response,pattern=^https?:\/\/anti-sdk-report\.m\.jd\.com\/report_event,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/jd_app_ck.js
+推送COOKIE = type=http-response,pattern=^https?:\/\/anti-sdk-report\.m\.jd\.com\/report_event,requires-body=1,script-path=https://github.com/braless/module/raw/master/js/jd_app_ck.js
 [MITM]
 hostname = %APPEND% *.jd.com

@@ -5,6 +5,6 @@
 #使用声明：️仅供学习交流，🈲️商业用途
 #wx-love-img.afunapp.com
 [Script]
-青藤之恋 = type=http-request,pattern=^https?:\/\/wx-love-img\.afunapp\.com\/.*,requires-body=0,script-path=https://github.com/braless/module/raw/main/js/qingteng.js
+青藤之恋 = type=http-request,pattern=^https?:\/\/wx-love-img\.afunapp\.com\/.*,requires-body=0,script-path=https://github.com/braless/module/raw/master/js/qingteng.js
 [MITM]
 hostname = %APPEND% *.afunapp.com

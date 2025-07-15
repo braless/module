@@ -4,6 +4,6 @@
 #更新时间:2024-08-16
 #使用声明：️仅供学习交流，🈲️商业用途
 [Script]
-Nasctl = type=http-response,pattern=^http[s]?:\/\/api\.revenuecat\.com\/v1\/receipts,requires-body=0,script-path=https://github.com/braless/module/raw/main/js/nasctl-crack.js
+Nasctl = type=http-response,pattern=^http[s]?:\/\/api\.revenuecat\.com\/v1\/receipts,requires-body=0,script-path=https://github.com/braless/module/raw/master/js/nasctl-crack.js
 [MITM]
 hostname = %APPEND% *.revenuecat.com
