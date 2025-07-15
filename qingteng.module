@@ -1,0 +1,10 @@
+#!name=青藤之恋
+#!desc=保存青藤之恋主页相册
+#脚本功能:保存青藤之恋主页相册
+#更新时间:2024-11-11
+#使用声明：️仅供学习交流，🈲️商业用途
+#wx-love-img.afunapp.com
+[Script]
+青藤之恋 = type=http-request,pattern=^https?:\/\/wx-love-img\.afunapp\.com\/.*,requires-body=0,script-path=https://github.com/braless/module/raw/main/js/qingteng.js
+[MITM]
+hostname = %APPEND% *.afunapp.com

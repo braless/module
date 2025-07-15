@@ -1,0 +1,13 @@
+#!name=派健康
+#!desc=派健康同步数据分析~
+#脚本功能:派健康同步历史数据
+#更新时间:2024-06-27
+#使用声明：️仅供学习交流，🈲️商业用途
+
+[URL Rewrite]
+# 这是屏蔽旧版APP弹出更新的，开启重写可以使用旧版
+^https?:\/\/utoken\.umeng\.com\/api\/updateZdata\/v2 - reject-dict
+[Script]
+派健康 = type=http-response,pattern=^https?:\/\/lsprod3\.laisitech\.com\/balance\/history\/trend\/all\/v2,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/paiHealthy.js
+[MITM]
+hostname = %APPEND% *.laisitech.com

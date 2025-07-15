@@ -1,0 +1,9 @@
+#!name=Autotouch
+#!desc=Autotouch破解
+#脚本功能:Autotouch破解
+#更新时间:2024-07-13
+#使用声明：️仅供学习交流，🈲️商业用途
+[Script]
+Autotouch = type=http-response,pattern=^http[s]?:\/\/license\.autotouch\.net\/license,requires-body=0,script-path=https://github.com/braless/module/raw/main/js/Autotouch.js
+[MITM]
+hostname = %APPEND% *.autotouch.net

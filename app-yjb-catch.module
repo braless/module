@@ -1,0 +1,9 @@
+#!name=养鸡宝抓数据
+#!desc=养鸡宝抓数据保存
+#脚本功能:养鸡宝抓数据
+#更新时间:2024-07-17
+#使用声明：️仅供学习交流，🈲️商业用途
+[Script]
+YangJiBao = type=http-response,pattern=^http[s]?:\/\/app-api\.yangjibao\.com\/fund_,requires-body=1,script-path=https://github.com/braless/module/raw/main/js/yjb-catch.js
+[MITM]
+hostname = %APPEND% *.yangjibao.com
