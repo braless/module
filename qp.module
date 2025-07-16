@@ -1,0 +1,10 @@
+#!name=壳牌石油
+#!desc=壳牌石油签到
+#脚本功能:壳牌石油签到
+#更新时间:2025-07-16
+#使用声明：️仅供学习交流，🈲️商业用途
+
+[Script]
+壳牌石油 = type=http-request,pattern=^https?:\/\/30669667\-893\.hd\.ysfaisco\.cn\/api\/game4RLDK$,requires-body=1,script-path=https://github.com/braless/module/raw/master/js/qiaoPai.js
+[MITM]
+hostname = %APPEND% 30669667-893.hd.ysfaisco.cn
