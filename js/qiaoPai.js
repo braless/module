@@ -37,7 +37,7 @@ const mute = '#cks_get_mute';
 const host = "https://api.oaife.com"
 $.mute = $.read(mute);
 var url = "https://30669667-893.hd.ysfaisco.cn/api/game4RLDK/"
-
+$.notify("初始化")
 // 脚本行入口
 !(async () => {
     typeof $.request !== `undefined` ? await GetCookie() : (await run({}));  // 主函数
@@ -52,6 +52,7 @@ function getCache() {
 }
 
 async function GetCookie() {
+    $.notify("开始")
     try {
         if ($request.url.indexOf('https://30669667-893.hd.ysfaisco.cn/30669667/5yb1KfJc3tObu2aJ42J7cQ/load-30669667-893.html') > -1) {
             $.notify("已捕获到请求!")
