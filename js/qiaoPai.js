@@ -54,6 +54,7 @@ function getCache() {
 async function GetCookie() {
     try {
         if ($request.url.indexOf('https://30669667-893.hd.ysfaisco.cn/30669667/5yb1KfJc3tObu2aJ42J7cQ/load-30669667-893.html') > -1) {
+            $.notify("已捕获到请求!")
             const cookie = $request.headers['Cookie'] || $request.headers['cookie'];
             const userAgent = $request.headers['User-Agent'] || $request.headers['user-agent'];
             const openId = CV.match(/faiOpenId=.+?;/)
