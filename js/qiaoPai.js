@@ -54,12 +54,13 @@ async function GetCookie() {
     $.notify("开始")
     try {
         if ($request.url.indexOf('load-30669667-893.html') > -1) {
-            $.notify("已捕获到请求!")
             const cookie = $request.headers['Cookie'] || $request.headers['cookie'];
             const userAgent = $request.headers['User-Agent'] || $request.headers['user-agent'];
-            const key = cookie.match(/faiOpenId=.+?;/)
+            const key = cookie.match(/faiOpenId=.+?/)
             const openId = key.toString().split('=')[1]
-            await run({cookie, userAgent, openId})
+            var obj = {cookie, userAgent, openId}
+            $.notify("已捕获到请求!",'',JSON.stringify(obj))
+            await run()
         } else {
             $.notify("未获取到cookie...")
         }
