@@ -37,10 +37,9 @@ const mute = '#cks_get_mute';
 const host = "https://api.oaife.com"
 $.mute = $.read(mute);
 var url = "https://30669667-893.hd.ysfaisco.cn/api/game4RLDK/"
-$.notify("初始化")
 // 脚本行入口
 !(async () => {
-    typeof $.request !== `undefined` ? await GetCookie() : (await run({}));  // 主函数
+    typeof $request !== `undefined` ? await GetCookie() : (await run({}));  // 主函数
 })().catch((e) => $.log(e) && $.logErr(e))
     .finally(async () => {
         $.done();
@@ -54,12 +53,13 @@ function getCache() {
 async function GetCookie() {
     $.notify("开始")
     try {
-        if ($request.url.indexOf('https://30669667-893.hd.ysfaisco.cn/30669667/5yb1KfJc3tObu2aJ42J7cQ/load-30669667-893.html') > -1) {
+        if ($request.url.indexOf('load-30669667-893.html') > -1) {
             $.notify("已捕获到请求!")
             const cookie = $request.headers['Cookie'] || $request.headers['cookie'];
             const userAgent = $request.headers['User-Agent'] || $request.headers['user-agent'];
-            const openId = cookie.match(/faiOpenId=.+?;/)
-            await run({cookie,userAgent,openId})
+            const key = cookie.match(/faiOpenId=.+?;/)
+            const openId = key.toString().split('=')[1]
+            await run({cookie, userAgent, openId})
         } else {
             $.notify("未获取到cookie...")
         }

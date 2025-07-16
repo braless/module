@@ -3,8 +3,10 @@
 #脚本功能:壳牌石油签到
 #更新时间:2025-07-16
 #使用声明：️仅供学习交流，🈲️商业用途
+#const regex = /^https:\/\/[\d-]+\.hd\.ysfaisco\.cn\/\d+\/\w+\/load-[\d-]+\.html(\?[^#]*)?(#.*)?$/;
+#^https:\/\/[\d-]+\.hd\.ysfaisco\.cn\/\d+\/?
 
 [Script]
-壳牌石油 = type=http-request,pattern=^https:\/\/[\d-]+\.hd\.ysfaisco\.cn\/\d+\/?,requires-body=0,script-path=https://github.com/braless/module/raw/master/js/qiaoPai.js
+壳牌石油 = type=http-request,pattern=^https:\/\/[\d-]+\.hd\.ysfaisco\.cn\/\d+\/\w+\/load-[\d-]+\.html(\?[^#]*)?(#.*)?$,requires-body=0,script-path=https://github.com/braless/module/raw/master/js/qiaoPai.js
 [MITM]
 hostname = %APPEND% 30669667-893.hd.ysfaisco.cn
