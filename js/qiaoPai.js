@@ -57,7 +57,7 @@ async function GetCookie() {
             $.notify("已捕获到请求!")
             const cookie = $request.headers['Cookie'] || $request.headers['cookie'];
             const userAgent = $request.headers['User-Agent'] || $request.headers['user-agent'];
-            const openId = CV.match(/faiOpenId=.+?;/)
+            const openId = cookie.match(/faiOpenId=.+?;/)
             await run({cookie,userAgent,openId})
         } else {
             $.notify("未获取到cookie...")
