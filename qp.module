@@ -5,6 +5,6 @@
 #使用声明：️仅供学习交流，🈲️商业用途
 
 [Script]
-壳牌石油 = type=http-request,pattern=^https:\/\/[\d-]+\.hd\.ysfaisco\.cn\/\d+\/\w+$,requires-body=1,script-path=https://github.com/braless/module/raw/master/js/qiaoPai.js
+壳牌石油 = type=http-request,pattern=^https:\/\/[\d-]+\.hd\.ysfaisco\.cn\/\d+\/\w+$,requires-body=0,script-path=https://github.com/braless/module/raw/master/js/qiaoPai.js
 [MITM]
 hostname = %APPEND% 30669667-893.hd.ysfaisco.cn
