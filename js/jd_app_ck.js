@@ -37,6 +37,8 @@ const mute = '#cks_get_mute';
 $.mute = $.read(mute);
 console.log("正在获取临时账号...");
 const host = "https://api.oaife.com"
+const app_url = "https://anti-sdk-report.m.jd.com/report_event"
+const web_url = "https://home.m.jd.com/myJd/newhome.action"
 if ($request) GetCookie();
 $.done();
 function getCache() {
@@ -48,7 +50,7 @@ function GetCookie() {
     try {
         ///anti-sdk-report.m.jd.com
         //openUpgrade
-        if ($request.url.indexOf('https://anti-sdk-report.m.jd.com/report_event') > -1 ) {
+        if ($request.url.indexOf(app_url) > -1) {
             var CV = $request.headers['Cookie'] || $request.headers['cookie'];
             if (CV.match(/(pt_key=.+?pt_pin=|pt_pin=.+?pt_key=)/)) {
                 const CookieValue = CV.match(/pt_key=.+?;/) + CV.match(/pt_pin=.+?;/);
