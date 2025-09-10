@@ -38,7 +38,7 @@ $.mute = $.read(mute);
 console.log("正在获取临时账号...");
 const host = "https://api.oaife.com"
 const app_url = "https://anti-sdk-report.m.jd.com/report_event"
-const key_words = "queryJDUserInfo"
+const key_words = "https://my.m.jd.com/jingdou/index.html"
 if ($request) GetCookie();
 $.done();
 function getCache() {
