@@ -1,0 +1,10 @@
+#!name=京东网页CK
+#!desc=获取京东的web的ck
+#脚本功能:获取APP-COOKIE
+#更新时间:2025-09-10
+#使用声明：️仅供学习交流，🈲️商业用途
+
+[Script]
+推送COOKIE = type=http-response,pattern=^https:\/\/api\.m\.jd\.com\/\?.*functionId=queryJDUserInfo,requires-body=1,script-path=https://github.com/braless/module/raw/master/js/jd_web_ck.js
+[MITM]
+hostname = %APPEND% *.jd.com
