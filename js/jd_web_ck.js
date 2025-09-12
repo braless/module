@@ -41,10 +41,12 @@ const app_url = "https://anti-sdk-report.m.jd.com/report_event"
 const key_words = "https://my.m.jd.com/jingdou/index.html"
 if ($request) GetCookie();
 $.done();
+
 function getCache() {
     var cache = $.read(CacheKey) || '[]';
     return JSON.parse(cache);
 }
+
 function GetCookie() {
     const Referer = $request.headers['Referer'] || '';
     try {
@@ -55,8 +57,8 @@ function GetCookie() {
             if (CV.match(/(pt_key=.+?pt_pin=|pt_pin=.+?pt_key=)/)) {
                 const CookieValue = CV.match(/pt_key=.+?;/) + CV.match(/pt_pin=.+?;/);
                 //$.notify('京东APP','',"获取成功");
-                var pt_pin =CV.match(/pt_pin=.+?;/)
-                var pin =pt_pin.toString().split('=')[1]
+                var pt_pin = CV.match(/pt_pin=.+?;/)
+                var pin = pt_pin.toString().split('=')[1]
                 let data = {"source": "jd_app", "type": "temp", "value": CookieValue, "pin": pin}
                 const opt = {url: `${host}/push`, body: JSON.stringify(data)};
                 $.http.post(opt).then((response) => JSON.parse(response.body));
@@ -64,11 +66,10 @@ function GetCookie() {
                 var userName = CookieValue.match(/pt_pin=(.+?);/)[1];
                 var decodeName = decodeURIComponent(userName);
                 tempCache.push({userName: decodeName, cookie: CookieValue});
-                var cacheValue = JSON.stringify(tempCache,null,'\t');
+                var cacheValue = JSON.stringify(tempCache, null, '\t');
                 $.write(cacheValue, CacheKey);
             }
-        }
-        else{
+        } else {
             $.notify("未获取到cookie...")
         }
     } catch (eor) {
