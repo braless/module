@@ -146,7 +146,8 @@ async function getCk() {
         const token = obj.authorization.replace(/^Bearer\s*/, '');
         const ckVal = $.toStr({deviceid, did, token});
         $.setdata(ckVal, _key)
-        $.msg($.name, '', '获取签到数据成功🎉\n' + ckVal)
+        //屏蔽小火箭通知
+        //$.msg($.name, '', '获取签到数据成功🎉\n' + ckVal)
         await notify(ckVal);
     }
 }
