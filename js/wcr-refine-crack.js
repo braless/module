@@ -5,6 +5,11 @@ url = url.replace(
     "$1wxid=wxid_io6mahhnwuzj22"
 );
 
+url = url.replace(
+    /([?&])device_fingerprint=[^&]*/,
+    "$1device_fingerprint=wxid_io6mahhnwuzj22"
+);
+
 $notification.post(
     "Shadowrocket",
     "URL Rewrite",
