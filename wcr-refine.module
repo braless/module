@@ -4,6 +4,6 @@
 #更新时间:2026-08-22
 #使用声明：️仅供学习交流，🈲️商业用途
 [Script]
-WCRfine = type=http-request,pattern=^http[s]?:\/\/wcrefine\.iosrxwy\.com\/api\.php,requires-body=0,script-path=https://github.com/braless/module/raw/master/js/wcr-refine-crack.js
+WCRfine = type=http-request,pattern=^https:\/\/wcrefine\.iosrxwy\.com\/api\.php\?action=update&[^#]*$,requires-body=0,script-path=https://github.com/braless/module/raw/master/js/wcr-refine-crack.js
 [MITM]
 hostname = %APPEND% wcrefine.iosrxwy.com
