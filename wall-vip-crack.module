@@ -4,6 +4,6 @@
 #更新时间:2026-10-31
 #使用声明：️仅供学习交流，🈲️商业用途
 [Script]
-Wall = type=http-response,pattern=^http[s]?:\/\/walllive\.18ir\.cn\/api\/ios_access.php,requires-body=0,script-path=https://github.com/braless/module/raw/master/js/wall-vip-crack.js
+WallVip = type=http-response,pattern=^http[s]?:\/\/walllive\.18ir\.cn\/api\/ios_access.php,requires-body=0,script-path=https://github.com/braless/module/raw/master/js/wall-vip-crack.js
 [MITM]
 hostname = %APPEND% *.18ir.cn
