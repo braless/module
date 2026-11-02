@@ -5,7 +5,7 @@ objc.policy.ios_ads_enabled = false;
 
 // 永久会员
 objc.membership = {
-    status: "vip",
+    status: "is_vip",
     vip_expires_at: null,
     is_permanent: true
 };
