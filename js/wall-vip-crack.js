@@ -6,13 +6,13 @@ objc.policy.ios_ads_enabled = false;
 // 永久会员
 objc.membership = {
     status: "is_vip",
-    vip_expires_at: "2099-12-31",
+    vip_expires_at: "2066-11-01T00:00:00+08:00",
     is_permanent: true
 };
 
 // 取消每日、每周限制
-objc.policy.daily_limit = -1;
-objc.policy.weekly_limit = -1;
+objc.policy.daily_limit = 100;
+objc.policy.weekly_limit = 100;
 objc.policy.reward_ad_count = 100;
 
 // 永久额度
