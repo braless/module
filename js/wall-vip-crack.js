@@ -19,7 +19,9 @@ objc.policy.reward_ad_count = 100;
 objc.quota.daily_remaining = 1000;
 objc.quota.daily_used = 0;
 objc.quota.daily_reserved = 1000;
-objc.quota.remaining = -1;
+objc.quota.daily_next_reset = "2016-11-01T00:00:00+08:00";
+objc.quota.next_reset = "2016-11-01T00:00:00+08:00";
+objc.quota.remaining = 1000;
 objc.quota.used = 0;
 objc.quota.reserved = 100;
 
