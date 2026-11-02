@@ -1,0 +1,9 @@
+#!name=交互壁纸VIP
+#!desc=开启永久VIP
+#脚本功能:交互壁纸vip
+#更新时间:2026-10-31
+#使用声明：️仅供学习交流，🈲️商业用途
+[Script]
+WallVip = type=http-response,pattern=^https?:\/\/walllive\.18ir\.cn\/api\/ios_membership_order_status\.php\?device_fp=.*$,requires-body=1,script-path=https://github.com/braless/module/raw/master/js/wall-member-crack.js
+[MITM]
+hostname = %APPEND% *.18ir.cn
