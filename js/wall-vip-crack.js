@@ -6,7 +6,7 @@ objc.policy.ios_ads_enabled = false;
 // 永久会员
 objc.membership = {
     status: "is_vip",
-    vip_expires_at: null,
+    vip_expires_at: "2099-12-31",
     is_permanent: true
 };
 
@@ -16,9 +16,9 @@ objc.policy.weekly_limit = -1;
 objc.policy.reward_ad_count = 0;
 
 // 永久额度
-objc.quota.daily_remaining = -1;
+objc.quota.daily_remaining = 1000;
 objc.quota.daily_used = 0;
-objc.quota.daily_reserved = 0;
+objc.quota.daily_reserved = 1000;
 objc.quota.remaining = -1;
 objc.quota.used = 0;
 objc.quota.reserved = 0;
