@@ -13,7 +13,7 @@ objc.membership = {
 // 取消每日、每周限制
 objc.policy.daily_limit = -1;
 objc.policy.weekly_limit = -1;
-objc.policy.reward_ad_count = 0;
+objc.policy.reward_ad_count = 100;
 
 // 永久额度
 objc.quota.daily_remaining = 1000;
@@ -21,7 +21,7 @@ objc.quota.daily_used = 0;
 objc.quota.daily_reserved = 1000;
 objc.quota.remaining = -1;
 objc.quota.used = 0;
-objc.quota.reserved = 0;
+objc.quota.reserved = 100;
 
 // 清空任务记录
 objc.quota.pending_ids = [];
