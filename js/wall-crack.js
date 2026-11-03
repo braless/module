@@ -1,3 +1,8 @@
+$notification.post(
+    "Shadowrocket",
+    "URL Rewrite",
+    "Anymore"
+);
 var objc = JSON.parse($response.body);
 objc.paid_mode_enabled = true;
 objc.ads_enabled = false;
