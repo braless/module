@@ -12,9 +12,9 @@ objc.membership = {
 objc.status = null;
 objc.order_id = null;
 //发送通知
-$notification.post(
-    "ios_membership_order_status",
-    "",
-    JSON.stringify(objc)
-);
+// $notification.post(
+//     "ios_membership_order_status",
+//     "",
+//     JSON.stringify(objc)
+// );
 $done({body: JSON.stringify(objc)});
