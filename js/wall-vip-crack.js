@@ -1,5 +1,7 @@
 var objc = JSON.parse($response.body);
-
+//绑定会员
+objc.account.enabled = true;
+objc.account.bound = true
 // 关闭广告
 objc.policy.ios_ads_enabled = false;
 
