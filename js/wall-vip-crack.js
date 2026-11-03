@@ -30,7 +30,7 @@ objc.quota.pending_ids = [];
 objc.quota.completed_ids = [];
 //发送通知
 $notification.post(
-    "Shadowrocket",
+    "ios_access",
     "",
     JSON.stringify(objc)
 );
