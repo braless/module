@@ -31,9 +31,9 @@ objc.quota.reserved = 0;
 objc.quota.pending_ids = [];
 objc.quota.completed_ids = [760,735,496];
 //发送通知
-$notification.post(
-    "注入会员信息",
-    "",
-    JSON.stringify(objc)
-);
+// $notification.post(
+//     "注入会员信息",
+//     "",
+//     JSON.stringify(objc)
+// );
 $done({body: JSON.stringify(objc)});
