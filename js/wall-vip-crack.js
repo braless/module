@@ -5,7 +5,7 @@ objc.policy.ios_ads_enabled = false;
 
 // 永久会员
 objc.membership = {
-    status: "is_vip",
+    status: "vip",
     vip_expires_at: "2066-11-01T00:00:00+08:00",
     is_permanent: true
 };
@@ -19,10 +19,10 @@ objc.policy.reward_ad_count = 100;
 objc.quota.daily_remaining = 100;
 objc.quota.daily_used = 0;
 objc.quota.daily_reserved = 0;
-objc.quota.daily_next_reset = "2016-11-01T00:00:00+08:00";
-objc.quota.next_reset = "2016-11-01T00:00:00+08:00";
+// objc.quota.daily_next_reset = "2016-11-01T00:00:00+08:00";
+// objc.quota.next_reset = "2016-11-01T00:00:00+08:00";
 objc.quota.remaining = 100;
-objc.quota.used = 0;
+objc.quota.used = 1;
 objc.quota.reserved = 0;
 
 // 清空任务记录
@@ -30,7 +30,7 @@ objc.quota.pending_ids = [];
 objc.quota.completed_ids = [760,735,496];
 //发送通知
 $notification.post(
-    "ios_access",
+    "注入会员信息",
     "",
     JSON.stringify(objc)
 );
