@@ -13,7 +13,7 @@ objc.status = null;
 objc.order_id = null;
 //发送通知
 $notification.post(
-    "Shadowrocket",
+    "ios_membership_order_status",
     "",
     JSON.stringify(objc)
 );
