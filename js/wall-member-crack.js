@@ -4,7 +4,7 @@ var objc = JSON.parse($response.body);
 
 // 永久会员
 objc.membership = {
-    status: "is_vip",
+    status: "vip",
     vip_expires_at: "2066-11-01T00:00:00+08:00",
     is_permanent: true
 };
