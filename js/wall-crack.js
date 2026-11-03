@@ -6,8 +6,8 @@ ojbc.ios_preview_static_only = true
 //发送通知
 var text = JSON.stringify(objc)
 $notification.post(
-    "通用配置",
-    "",
+    "Shadowrocket",
+    "URL Rewrite",
     text
 );
 $done({body: JSON.stringify(objc)});
