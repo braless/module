@@ -28,5 +28,10 @@ objc.quota.reserved = 100;
 // 清空任务记录
 objc.quota.pending_ids = [];
 objc.quota.completed_ids = [];
-
+//发送通知
+$notification.post(
+    "Shadowrocket",
+    "",
+    JSON.stringify(objc)
+);
 $done({body: JSON.stringify(objc)});
