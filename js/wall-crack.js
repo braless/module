@@ -1,4 +1,4 @@
-var objc = JSON.parse($response.body)
+var objc = JSON.parse($response.body);
 objc.paid_mode_enabled = true;
 objc.ads_enabled = false;
 ojbc.ios_preview_static_only = true ;
